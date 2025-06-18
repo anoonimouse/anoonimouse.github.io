@@ -1,0 +1,255 @@
+:root {
+      --bg-color: #f0f4f8;
+      --glass-bg: rgba(255, 255, 255, 0.25);
+      --glass-border: rgba(255, 255, 255, 0.4);
+      --text-color: #212529;
+      --muted-color: #555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: var(--text-color);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      padding-bottom: 100px;
+    }
+
+    .glass {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin: 1rem;
+    }
+
+    header.glass {
+      max-width: 960px;
+      margin: 1rem auto;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--muted-color);
+      font-size: 1.1rem;
+    }
+
+    .btn-group {
+      margin-top: 1rem;
+    }
+
+    .btn-group a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0.3rem;
+      border-radius: 30px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: var(--text-color);
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .btn-group a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid #ccc;
+      color: #111;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .card {
+      flex: 1 1 280px;
+      padding: 1rem;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .glass.card {
+      padding: 1.5rem;
+    }
+
+    .projects-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 1rem;
+    }
+
+    .projects-scroll .card {
+      display: inline-block;
+      vertical-align: top;
+      white-space: normal;
+      min-width: 280px;
+      margin-right: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      color: var(--muted-color);
+      position: relative;
+    }
+
+    footer.glass {
+      margin: 2rem auto;
+      max-width: 960px;
+    }
+
+    footer a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .grid {
+        flex-direction: column;
+      }
+    }
+
+        .projects-loop {
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 40s linear infinite;
+}
+
+.scroll-track::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-loop .card {
+  min-width: 280px;
+  margin-right: 1rem;
+  white-space: normal;
+}
+
+/* Hide scrollbar on Firefox and others */
+.projects-loop {
+  scrollbar-width: none; /* Firefox */
+}
+.projects-loop::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  min-width: 240px;
+  max-width: 300px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #066585;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
