@@ -1,0 +1,28 @@
+RewriteEngine On
+
+# Rewrite root URL to load index.html or other home page
+RewriteRule ^$ index.html [L]
+
+# Rewrite for /resume to /index/resume.html
+RewriteRule ^resume$ resume.html [L]
+
+# Rewrite for /ResumeGrad to /index/ResumeGrad.pdf
+RewriteRule ^ResumeGrad$ ResumeGrad.pdf [L]
+
+# Rewrite for /projects to /index/projects.html
+RewriteRule ^projects$ projects.html [L]
+
+# Rewrite for /projects/sys32 to /index/projects/sys32.html
+RewriteRule ^projects/sys32$ projects/sys32.html [L]
+
+# Rewrite for /projects/redditlist to /index/projects/redditlist.html
+RewriteRule ^projects/redditlist$ projects/redditlist.html [L]
+
+# Rewrite for /projects/filesort to /index/projects/filesort.html
+RewriteRule ^projects/filesort$ projects/filesort.html [L]
+
+# Rewrite for /projects/memes to /index/projects/memes.html
+RewriteRule ^projects/memes$ projects/memes.html [L]
+
+# Handle 404 errors
+ErrorDocument 404 /404.html
